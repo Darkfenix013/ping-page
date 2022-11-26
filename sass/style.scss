@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+$primary: hsl(223, 87%, 63%);
+$bordeInput:hsl(223, 100%, 88%);
+$errorInput:hsl(354, 100%, 66%);
+$colorFont:hsl(0, 0%, 59%);
+$color:hsl(209, 33%, 12%);
+$font-family: 'Libre Franklin', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: $font-family;
+    padding-top: 15%;
+    
+}
+
+.Logo__Contaier{
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+.Text__Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    h1{
+        color: $colorFont;
+        font-weight: 100;
+        font-size: 25px;
+       
+        b{
+            color: black;
+            font-weight: bold;
+            
+        }
+    }
+    span{
+        padding-bottom: 2em;
+        font-size: 15px;
+        font-weight: 100;
+    }
+}
+
+.Address__Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding-bottom: 3em;
+    position: relative;
+    input{
+        width: 250px;
+        height: 40px;
+        padding-left: 30px;
+        border-radius: 25px;
+        border: none;
+        outline: 2px solid  $bordeInput;
+        &:focus{
+            transform: scale(1.1);
+            transition: transform .5s;
+        }
+    }
+    span{
+        visibility: hidden;
+        font-size: 11px;
+        color: $errorInput;
+    }
+    button{
+        width: 290px;
+        height: 40px;
+        text-align: center;
+        border-radius: 25px;
+        border:none;
+        background: $primary;
+        color: #fff;
+        font-size: 13px;
+        font-weight: lighter;
+        cursor: pointer;
+        box-shadow:10px 10px 5px -3px rgba(79,125,243,0.75); 
+        &:hover{
+            transform: scale(1.1);
+            transition: transform .5s;
+            }
+    }
+}
+
+.Address__Container.error{
+    gap: 1.5em;
+    input{
+        outline: 2px solid  $errorInput;
+    }
+   span{
+        visibility: visible;
+        position: absolute;
+        top: 43px;
+   }
+
+}
+.Address__Container.enviado{
+    gap: 1.5em;
+    input{
+        outline: 2px solid  rgb(99, 253, 168);
+    }
+   span{
+        visibility: visible;
+        color:rgb(25, 168, 89) ;
+        position: absolute;
+        top: 43px;
+   }
+
+}
+
+.Dashboard{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+   
+    img{
+        width: 290px;
+        height: 200px;
+    }
+}
+
+.Footer__Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 7rem;
+    .Social__Container{
+        display: flex;
+        gap: 1em;
+    }
+    span{
+        color: $colorFont;
+        font-size: 10px;
+    }
+}
+
+.Social__Container{
+    .Social__Item{
+        padding: 10px;
+        border: none;
+        border-radius: 25px;
+        outline: .5px solid $colorFont;
+        color: $primary;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.5);
+            transition: transform .5s;
+        }
+    }
+
+}
+@media (min-width:800px){
+    .Address__Container{
+        flex-direction: row;
+        gap: 1.5em;
+        input{
+            width: 300px;
+        }
+        button{
+            width: 200px;
+        }
+    }
+    .Address__Container.error,.Address__Container.enviado{
+       span{
+            left: 150px;
+       }
+    
+    }
+    
+    .Dashboard{
+        width: 600px;
+        img{
+            width: 590px;
+            height: 300px;
+        }
+    }
+    .Social__Container{
+        .Social__Item{
+            &:hover{
+               color: #fff;
+               background-color: $primary;
+            }
+        }
+    
+    }
+
+}

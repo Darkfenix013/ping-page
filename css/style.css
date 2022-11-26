@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  padding-top: 15%;
+}
+
+.Logo__Contaier {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+}
+
+.Text__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.Text__Container h1 {
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 100;
+  font-size: 25px;
+}
+.Text__Container h1 b {
+  color: black;
+  font-weight: bold;
+}
+.Text__Container span {
+  padding-bottom: 2em;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.Address__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding-bottom: 3em;
+  position: relative;
+}
+.Address__Container input {
+  width: 250px;
+  height: 40px;
+  padding-left: 30px;
+  border-radius: 25px;
+  border: none;
+  outline: 2px solid hsl(223deg, 100%, 88%);
+}
+.Address__Container input:focus {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.Address__Container span {
+  visibility: hidden;
+  font-size: 11px;
+  color: hsl(354deg, 100%, 66%);
+}
+.Address__Container button {
+  width: 290px;
+  height: 40px;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  background: hsl(223deg, 87%, 63%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: lighter;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px -3px rgba(79, 125, 243, 0.75);
+}
+.Address__Container button:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.Address__Container.error {
+  gap: 1.5em;
+}
+.Address__Container.error input {
+  outline: 2px solid hsl(354deg, 100%, 66%);
+}
+.Address__Container.error span {
+  visibility: visible;
+  position: absolute;
+  top: 43px;
+}
+
+.Address__Container.enviado {
+  gap: 1.5em;
+}
+.Address__Container.enviado input {
+  outline: 2px solid rgb(99, 253, 168);
+}
+.Address__Container.enviado span {
+  visibility: visible;
+  color: rgb(25, 168, 89);
+  position: absolute;
+  top: 43px;
+}
+
+.Dashboard {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+.Dashboard img {
+  width: 290px;
+  height: 200px;
+}
+
+.Footer__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 7rem;
+}
+.Footer__Container .Social__Container {
+  display: flex;
+  gap: 1em;
+}
+.Footer__Container span {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 10px;
+}
+
+.Social__Container .Social__Item {
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  outline: 0.5px solid hsl(0deg, 0%, 59%);
+  color: hsl(223deg, 87%, 63%);
+  cursor: pointer;
+}
+.Social__Container .Social__Item:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s;
+}
+
+@media (min-width: 800px) {
+  .Address__Container {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  .Address__Container input {
+    width: 300px;
+  }
+  .Address__Container button {
+    width: 200px;
+  }
+  .Address__Container.error span, .Address__Container.enviado span {
+    left: 150px;
+  }
+  .Dashboard {
+    width: 600px;
+  }
+  .Dashboard img {
+    width: 590px;
+    height: 300px;
+  }
+  .Social__Container .Social__Item:hover {
+    color: #fff;
+    background-color: hsl(223deg, 87%, 63%);
+  }
+}
